@@ -25,3 +25,18 @@ public class SpinWords {
   }
 }
 
+=====================================
+//OUTRA MANEIRA DE RESOLVER O MESMO PROBLEMA:
+
+public class SpinWords {
+    public String spinWords (String sentence){
+        String [] palavra = sentence.spit(" ");
+
+        for (int i = 0; i<palavra.length; i++){
+            if (palavra.length() >= 5){
+                palavra[i]= new StringBuilder(palavra[i].reverse().toString());
+            }
+        }
+        return String.join (" ",palavra);
+    }
+}
