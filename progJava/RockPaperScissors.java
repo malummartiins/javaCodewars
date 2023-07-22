@@ -54,6 +54,8 @@ public class RockPaperScissors {
             if (!playAgain.equals("s")) {
                 break;
             }
+
+            scanner.close();
         }
 
     }
