@@ -5,9 +5,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class WPMProgram {
+    
 
-    static String [] words  = {"envelope", "dev", "livros", "cachorro", "bolacha","café","chocolate", "praia", "sol","estudos"};
+    static String[] words = { "envelope", "dev", "livros", "cachorro", "bolacha", "café", "chocolate", "praia", "sol",
+            "estudos" };
+
     public static void main(String[] args) throws InterruptedException {
+        Scanner scan = new Scanner (System.in);
+
+        while(true){
         System.out.println("3");
         Thread.sleep(1000);
         System.out.println("2");
@@ -24,7 +30,7 @@ public class WPMProgram {
 
         double start = LocalTime.now().toNanoOfDay();
 
-        Scanner scan = new Scanner (System.in);
+        
         String typedWords = scan.nextLine();
 
         double end = LocalTime.now().toNanoOfDay();
@@ -36,6 +42,15 @@ public class WPMProgram {
         int wpm = (int) (((double)numChars / 5 / seconds) * 60);
     
         System.out.println("Your WPM is " + wpm);
+        System.out.println();
+        
+         System.out.println("Jogar de novo? [S/N]");
+            String playAgain = scan.nextLine();
+
+            if (!playAgain.equals("s")) {
+                break;
+            }
     }
-    
+       
+    }
 }
