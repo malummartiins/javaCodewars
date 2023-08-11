@@ -1,6 +1,6 @@
 package progJava;
 
-public class Sudoku {
+public class Sudoku { 
 
     private static final int GRID_SIZE = 9;
 
